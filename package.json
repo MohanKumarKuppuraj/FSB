@@ -3,15 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1"
   },
   "scripts": {
-    "start":"node apis/server.js",
+    "start": "node apis/server.js",
     "start:server": "node ./server/server.js",
     "start:react": "react-scripts start",
     "build": "webpack --mode production",
@@ -38,6 +35,9 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
     "babel-loader": "^8.0.6",
     "express": "^4.18.1",
     "fs": "0.0.1-security",

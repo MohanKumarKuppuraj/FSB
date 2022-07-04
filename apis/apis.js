@@ -11,7 +11,7 @@ class APIS {
 	initializeServer = function(app,process,services){
 		app.get("/api/selections",function(req,res){
 			var JSON_DATA = JSON.parse(fs.readFileSync( path.resolve('./server/data.json'),'utf-8'));
-			res.json(JSON_DATA);
+			res.status(200).json(JSON_DATA);
 		});
 	}
 }

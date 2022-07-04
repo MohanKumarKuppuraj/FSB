@@ -1,10 +1,9 @@
 class UtilityService{
 
-
-
-getSelections = function(){
-
-
+getSelections = async function(){
+	var fetchResponse =	await fetch("/api/selections");
+	var data  = await fetchResponse.json();
+	return data;
 }
 
 

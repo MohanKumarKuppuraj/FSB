@@ -1,0 +1,100 @@
+body{
+font-family: 'Roboto', sans-serif;
+}
+
+.header{
+	background-color: #004680;
+	height: 50px;
+	top: 0;
+	width: 100%;
+	left: 0;
+	position: fixed;
+}
+
+.header img.logo{
+	height: 30px;
+    top: 10px;
+    position: relative;
+    left: 20px;
+}
+
+.content-container{
+	position: fixed;
+	top: 50px;
+	height: calc(100vh - 100px);
+	left: 0;
+	width: 100%;
+	background: #f3f2ef;
+	overflow: auto;
+}
+
+.footer{
+	background-color: #f6f6f6;
+	height: 50px;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
+}
+
+.footer p{
+	font-size: 12px;
+    letter-spacing: 0px;
+    color: #666666;
+    padding: 2px 10px;
+}
+
+
+.fsb-events{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.fsb-events .categories{
+	width: 200px;
+    background-color: #fff;
+    border-radius: 2px;
+    height: 80%;
+    top: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.fsb-events .event-list{
+    width: calc(100% - 300px);
+    background-color: #fff;
+    border-radius: 2px;
+    height: calc(100% - 40px);
+    top: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.fsb-events .categories .main-category h1{
+	font-size: 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.fsb-events .categories .sub-category{
+	margin-left: 30px;
+}
+
+.fsb-events .categories .sub-category h2{
+	font-size: 16px;
+    cursor: pointer;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    opacity: 0.8;
+}
+
+.fsb-events .categories .sub-category h2.selected,
+.fsb-events .categories .sub-category h2:hover{
+	opacity: 1;
+}

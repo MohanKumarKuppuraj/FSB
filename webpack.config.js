@@ -24,3 +24,19 @@ module.exports = [{
 		]
 		}
 	}];
+
+	/*
+	, {
+                test:/\.css$/,
+                use:['style-loader','css-loader']
+            },
+            {
+                test: /\.scss$/,
+                  use: [{
+                    loader: "style-loader"
+                  }, {
+                    loader: "css-loader" ,
+                    options: { modules: true }
+                  }]
+            }
+  */

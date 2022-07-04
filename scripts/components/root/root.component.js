@@ -1,5 +1,7 @@
 import React from "react";
-import UtilityServices from "./../../services/utility.service";
+import Header from "./../header/header.component";
+import Footer from "./../footer/footer.component";
+import FSBEvents from "./../fsb-events/fsb.events.component";
 class RootComponent extends React.Component{
 	constructor(props){
 		super(props);
@@ -12,13 +14,11 @@ class RootComponent extends React.Component{
 	render(){
 		return (
 			<section className="body-container">
-				<section className="header">
-					Header
-				</section>
-
+				<Header></Header>
 				<section className="content-container">
-					Content Section
+					<FSBEvents></FSBEvents>
 				</section>
+				<Footer></Footer>
 			</section>
 		);
 	}
