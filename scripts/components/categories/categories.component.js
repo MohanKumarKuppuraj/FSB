@@ -32,8 +32,7 @@ class Categories extends React.Component{
 						onClick = {()=>{
 							this.props.changeSubCategory(subCategory);
 						}}
-						category={subCategory.id}
-						 className={String(this.props.selectedSubCategory) === String(subCategory.id)}>{subCategory.name}</h2>
+						 className={String(this.props.selectedSubCategory) === String(subCategory.id)?"selected":""}>{subCategory.name}</h2>
 						)}
 					</div>
 					</div>

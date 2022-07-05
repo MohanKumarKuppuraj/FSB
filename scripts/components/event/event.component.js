@@ -9,7 +9,7 @@ class Event extends React.Component{
 	}
 
 	componentDidMount(){
-
+		
 	}
 
 	componentWillReceiveProps(){
@@ -18,7 +18,16 @@ class Event extends React.Component{
 
 	render(){
 		return (
-			<div>Event Component Loaded</div>
+			<div className={"event-container"+(this.props.eventObj.active?" active":" inactive")}>
+				<h1>{this.props.eventObj.name}</h1>
+				{(this.props.eventObj.selection!==undefined?this.props.eventObj.selection:[]).map(
+					(selection,selectionIndex)=><div>
+					<Selection data={selection}
+					eventStatus={this.props.eventObj.active}
+					></Selection>
+					</div>
+				)}
+			</div>
 		);
 	}
 

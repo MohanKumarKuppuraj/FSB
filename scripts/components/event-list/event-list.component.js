@@ -21,11 +21,11 @@ class EventList extends React.Component{
 					{(this.props.allEvents.category!==undefined?this.props.allEvents.category:[]).map((category,categoryIndex)=>
 					<div>
 					{
-						/*category.subcat.map((subCategory,subCategoryIndex)=>
+						(category.subcat!==undefined?category.subcat:[]).map((subCategory,subCategoryIndex)=>
 						{
 						if(String(subCategory.id) === String(this.props.selectedSubCategory)){
 						return (<div>
-							{subCategory.events.map((event,eventIndex)=>
+							{(subCategory.event!==undefined?subCategory.event:[]).map((event,eventIndex)=>
 							<Event eventObj={event}></Event>
 							)}
 						</div>)
@@ -33,7 +33,7 @@ class EventList extends React.Component{
 							return null
 						}
 						}
-					)*/}
+					)}
 					</div>
 				)}
 			</div>

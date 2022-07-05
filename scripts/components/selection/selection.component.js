@@ -17,7 +17,11 @@ class Selection extends React.Component{
 
 	render(){
 		return (
-			<div>Selection Component Loaded</div>
+			<div className="selection-container">
+				<span className="selection-title">{this.props.data.name}</span>
+				<span className="selection-price">£{this.props.data.price}</span>
+				<button disabled={this.props.data.active ===false || this.props.eventStatus === false}>Draw</button>
+			</div>
 		);
 	}
 

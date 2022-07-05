@@ -91,10 +91,58 @@ font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     margin-bottom: 10px;
     color: #000000;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .fsb-events .categories .sub-category h2.selected,
 .fsb-events .categories .sub-category h2:hover{
 	opacity: 1;
+}
+
+.event-container{
+	padding: 10px;
+	background: #f9f9f9;
+	float: left;
+	margin: 10px;
+	width: calc(100% - 40px);
+}
+
+.event-container.active{
+	border: 1px solid #999999;
+}
+
+.event-container.inactive{
+	border: 1px dotted #999999;
+}
+
+.event-container.active:hover{
+	border: 1px solid #777777;
+}
+
+.event-container > h1{
+	font-size: 20px;
+}
+
+.event-container .selection-container{
+    padding: 10px;
+    background: #f9f9f9;
+    float: left;
+    margin: 10px;
+}
+
+.event-container .selection-container .selection-title{
+	font-size: 16px;
+	float: left;
+}
+
+.event-container .selection-container button{
+	cursor: pointer;
+	float: left;
+	margin-left: 10px;
+}
+
+.event-container .selection-container .selection-price{
+	font-size: 14px;
+	float: left;
+	margin-left: 10px;
 }
