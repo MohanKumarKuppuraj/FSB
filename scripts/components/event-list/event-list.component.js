@@ -26,7 +26,12 @@ class EventList extends React.Component{
 						if(String(subCategory.id) === String(this.props.selectedSubCategory)){
 						return (<div>
 							{(subCategory.event!==undefined?subCategory.event:[]).map((event,eventIndex)=>
-							<Event eventObj={event}></Event>
+							<Event 
+							categoryIndex={categoryIndex}
+							subCategoryIndex={subCategoryIndex}
+							eventIndex = {eventIndex}
+							selectSelection={this.props.selectSelection}
+							eventObj={event}></Event>
 							)}
 						</div>)
 						}else{

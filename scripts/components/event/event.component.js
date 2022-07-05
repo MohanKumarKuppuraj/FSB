@@ -23,6 +23,10 @@ class Event extends React.Component{
 				{(this.props.eventObj.selection!==undefined?this.props.eventObj.selection:[]).map(
 					(selection,selectionIndex)=><div>
 					<Selection data={selection}
+					categoryIndex={this.props.categoryIndex}
+					subCategoryIndex={this.props.subCategoryIndex}
+					eventIndex = {this.props.eventIndex}
+					selectSelection={this.props.selectSelection}
 					eventStatus={this.props.eventObj.active}
 					></Selection>
 					</div>

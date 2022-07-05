@@ -13,16 +13,29 @@ class FSBEvents extends React.Component{
 			"selectedSubCategory":-1
 		};
 		this.changeSubCategory = this.changeSubCategory.bind(this);
+		this.selectSelection = this.selectSelection.bind(this);
 	}
 
 	async loadEvents(){
 		var data = await UtilityServices.getSelections();
-		console.log("data in loadEvents",data);
 		this.setState({"allEvents":data,"selectedSubCategory":(data.category!==undefined && data.category.length>0 && data.category[0].subcat!==undefined && data.category[0].subcat.length>0)?data.category[0].subcat[0].id:-1})
 	}
 
 	changeSubCategory = function(subCategory){
 		this.setState({"selectedSubCategory":subCategory.id});
+	}
+
+	selectSelection = function(categoryIndex,subCategoryIndex,eventIndex,selection){
+		console.log("selection",selection);
+		var allEvents = this.state.allEvents;
+		for(var i in allEvents.category[categoryIndex].subcat[subCategoryIndex].event[eventIndex].selection){
+			if(allEvents.category[categoryIndex].subcat[subCategoryIndex].event[eventIndex].selection[i].id === selection.id){
+				allEvents.category[categoryIndex].subcat[subCategoryIndex].event[eventIndex].selection[i].isSelected = true;
+			}else{
+				allEvents.category[categoryIndex].subcat[subCategoryIndex].event[eventIndex].selection[i].isSelected = false;
+			}
+		}
+		this.setState({allEvents:allEvents});
 	}
 
 	componentDidMount(){
@@ -41,6 +54,7 @@ class FSBEvents extends React.Component{
 				selectedSubCategory={this.state.selectedSubCategory}
 				></Categories>
 				<EventList allEvents={this.state.allEvents}
+					selectSelection={this.selectSelection}
 					selectedSubCategory={this.state.selectedSubCategory}
 				></EventList>
 			</section>

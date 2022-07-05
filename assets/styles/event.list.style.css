@@ -1,5 +1,5 @@
 body{
-font-family: 'Roboto', sans-serif;
+font-family: 'Lato', sans-serif;
 }
 
 .header{
@@ -100,49 +100,68 @@ font-family: 'Roboto', sans-serif;
 }
 
 .event-container{
-	padding: 10px;
 	background: #f9f9f9;
 	float: left;
 	margin: 10px;
 	width: calc(100% - 40px);
+	box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
 
 .event-container.active{
-	border: 1px solid #999999;
+	border: 1px solid #f9f9f9;
+    border-radius: 2px;
 }
 
 .event-container.inactive{
-	border: 1px dotted #999999;
+	border: 1px dotted #f9f9f9;
+	opacity: 0.5;
 }
 
 .event-container.active:hover{
-	border: 1px solid #777777;
+	border: 1px solid #dddddd;
 }
 
 .event-container > h1{
 	font-size: 20px;
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+    background: #004680;
+    color: #fff;
 }
 
 .event-container .selection-container{
     padding: 10px;
     background: #f9f9f9;
-    float: left;
+    display: flex;
     margin: 10px;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .event-container .selection-container .selection-title{
 	font-size: 16px;
-	float: left;
+	width: 300px;
 }
 
 .event-container .selection-container button{
 	cursor: pointer;
 	float: left;
-	margin-left: 10px;
+	width: 100px;
+	border: 1px solid #999;
+}
+
+.event-container .selection-container button.selected{
+	border: 1px solid #000;
 }
 
 .event-container .selection-container .selection-price{
 	font-size: 14px;
-	float: left;
+	border: 1px solid #dddddd;
+	border-radius: 2px;
 	margin-left: 10px;
+	padding: 2px 10px;
+	width: 100px;
+	text-align: center;
 }
